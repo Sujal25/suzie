@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primaryHover;
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary text-background;
+  }
+
+  /* Focus styles */
+  *:focus {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primaryHover text-white font-medium py-3 px-6 rounded-lg transition;
+  }
+
+  .btn-secondary {
+    @apply bg-surface border border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-6 rounded-lg transition;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-surface text-heading font-medium py-2 px-4 rounded-lg transition;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl shadow-card border border-border;
+  }
+
+  .card-hover {
+    @apply transform hover:scale-105 transition;
+  }
+
+  .heading {
+    @apply text-heading font-bold;
+  }
+
+  .subheading {
+    @apply text-primary font-semibold;
+  }
+
+  .text-body {
+    @apply text-text;
+  }
+
+  .bordered {
+    @apply border border-border;
+  }
+
+  /* Remove gradients, rainbow, and excessive animation classes */
+  /* Keep only minimal, subtle effects */
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .glass-effect {
+    @apply bg-background/10 backdrop-blur-md border border-background/20;
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #e5e7eb;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-dark-200;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary-600 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-700;
+  }
+
+  .animate-gradient-move {
+    animation: gradient-move 4s ease-in-out infinite;
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+
+  .animate-text-rainbow {
+    animation: text-rainbow 6s linear infinite;
+    background: linear-gradient(90deg, #A66CFF, #5A8DEE, #A66CFF, #F1F1F1, #A66CFF);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes gradient-move {
+  0%, 100% {
+    background-position: left center;
+  }
+  50% {
+    background-position: right center;
+  }
+}
+
+@keyframes text-rainbow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Update all white backgrounds to purple gradient or deep purple */
+.section-padding.bg-gray-50,
+.section-padding.bg-white {
+  @apply bg-gradient-to-br from-[#A66CFF] via-[#5A8DEE] to-[#2D1856] text-black !important;
+}
+
+/* Animated gradient text utility */
+.animate-text {
+  background: linear-gradient(135deg, #FF4FD8, #8A2BE2, #38BDF8);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: text 5s ease infinite;
+}
+
+@keyframes text {
+  0%, 100% {
+    background-position: left center;
+  }
+  50% {
+    background-position: right center;
+  }
+}
+
+/* Glowing card effect */
+.card-glow {
+  box-shadow: 0 0 20px 2px #FF4FD8, 0 0 40px 4px #8A2BE2;
+  background: rgba(26, 26, 46, 0.85);
+  border: 1.5px solid #FF4FD8;
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.card-glow:hover {
+  box-shadow: 0 0 30px 6px #FF4FD8, 0 0 60px 12px #8A2BE2;
+  border-color: #8A2BE2;
+}
+
+/* Purple section background */
+.bg-purple-section {
+  background: linear-gradient(to bottom, #1A1A2E, #2D0B52);
+  color: #111;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: background 0.4s, color 0.4s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.text-on-purple {
+  color: #111;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+} 

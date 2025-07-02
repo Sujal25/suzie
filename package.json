@@ -1,0 +1,61 @@
+{
+  "name": "sujal-maurya-portfolio",
+  "version": "1.0.0",
+  "description": "Sujal Maurya - CSE Student, Startup Founder, Cinematographer & Content Creator Portfolio",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "framer-motion": "^10.16.4",
+    "react-intersection-observer": "^9.5.2",
+    "react-icons": "^4.11.0",
+    "react-scroll": "^1.8.9",
+    "react-tilt": "^1.0.2",
+    "react-type-animation": "^3.2.0",
+    "react-vertical-timeline-component": "^3.6.0",
+    "aos": "^2.3.4",
+    "react-particles": "^2.9.3",
+    "tsparticles": "^2.9.3",
+    "emailjs-com": "^3.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.8.1",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://sujalmaurya.github.io/portfolio"
+} 
