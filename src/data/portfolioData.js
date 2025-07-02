@@ -21,7 +21,7 @@ export const portfolioData = {
     tagline: "Building Ideas, Editing Stories, Creating Impact",
     subtitle: "CSE Student • Startup Founder • Cinematographer • Content Creator",
     description: "Passionate about technology, entrepreneurship, and creative storytelling. Currently pursuing Computer Science at MNIT Jaipur while building innovative solutions and creating compelling visual content.",
-    image: "/img/hero.jpeg",
+    image: "https://i.postimg.cc/P59Bk88x/hero.jpg",
     resumeUrl: "/resume.pdf", // You'll need to add your resume
     socialLinks: {
       github: "https://github.com/Sujal25",
@@ -93,7 +93,7 @@ export const portfolioData = {
       title: "IgniteU Platform",
       description: "A comprehensive platform for student innovation and entrepreneurship. Features include project showcase, mentorship matching, and resource sharing.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Firebase"],
-      image: "/img/igniteupro.png",
+      image: "https://i.postimg.cc/4xYp9Y2p/igniteupro.png",
       githubUrl: "https://theigniteu.com/",
       liveUrl: "https://theigniteu.com/",
       featured: true
@@ -104,8 +104,8 @@ export const portfolioData = {
       title: "Personal Portfolio",
       description: "A modern, responsive portfolio website showcasing my work and skills. Built with React and TailwindCSS.",
       technologies: ["React", "TailwindCSS", "Framer Motion", "EmailJS"],
-      image: "/img/personalport.png",
-      githubUrl: "https://github.com/sujalmaurya/portfolio",
+      image: "https://i.postimg.cc/prVFXrnh/personalport.png",
+      githubUrl: "https://github.com/Sujal25/suzie",
       liveUrl: "https://sujalmaurya.github.io/portfolio",
       featured: false
     }
@@ -122,21 +122,21 @@ export const portfolioData = {
         title: "IgniteU Reel",
         description: "A high-energy edit capturing the excitement and innovation of the IgniteU.",
         video: "/videos/igniteu.mp4",
-        thumbnail: "/images/videos/igniteuthumb.jpg"
+        thumbnail: "https://i.postimg.cc/brdwBttT/igniteu.png"
       },
       {
         id: 2,
         title: "Cinematic Reel 1",
         description: "A visually stunning sequence showcasing my skills in color grading and dynamic editing.",
         video: "/videos/cinematic-reel-1.mp4",
-        thumbnail: "/images/videos/cinematic-reel-1-thumb.jpg"
+        thumbnail: "https://i.postimg.cc/nLcrDghg/cinematic-reel-2-thumb.png"
       },
       {
         id: 4,
         title: "Cinematic Reel 3",
         description: "A showcase of my best transitions, effects, and narrative-driven editing style.",
         video: "/videos/cinematic-reel-3.mp4",
-        thumbnail: "/images/videos/cinematic-reel-3-thumb.png"
+        thumbnail: "https://i.postimg.cc/WpSZYGQM/cinematic-reel-3-thumb.png"
       }
     ]
   },
@@ -191,7 +191,7 @@ export const portfolioData = {
           "Won startup competitions"
         ],
         technologies: ["React", "Node.js", "MongoDB", "Firebase"],
-        image: "/img/igniteu.jpeg",
+        image: "https://i.postimg.cc/G3ZRCVwr/igniteu.jpg",
         website: "https://theigniteu.com/",
         status: "Active"
       }
@@ -239,6 +239,6 @@ export const portfolioData = {
     responseTime: "Usually responds within 24 hours"
   },
 
-  loadingImage: "/img/hero.jpeg"
+  loadingImage: "https://i.postimg.cc/KjnxVDYt/image.png"
 }; 
 

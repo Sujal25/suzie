@@ -30,10 +30,13 @@ const LoadingScreen = () => {
           className="mb-8"
         >
           <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-primary-500 mx-auto mb-6 animate-float">
-            <img
+            <motion.img
               src={portfolioData.loadingImage}
               alt="Sujal Maurya"
               className="w-full h-full object-cover"
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.2 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
               onError={(e) => {
                 e.target.src = 'https://via.placeholder.com/96x96/0ea5e9/ffffff?text=SM';
               }}
